@@ -1,0 +1,76 @@
+.publications {
+    padding: 30px 0;
+    background-color: $color-bg;
+
+    &__header {
+        padding-bottom: 30px;
+    }
+
+    &__read-more {
+        padding-bottom: 10px;
+    }
+
+    &__items {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+
+        @media screen and (min-width: 576px) and (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: 575px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.publication {
+    background-color: $white;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &__img {
+        height: 200px;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        padding: 30px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        color: $color-regular;
+    }
+
+    &__separator {
+        height: 4px;
+        background-color: $color-separator;
+        margin: 15px 0;
+    }
+
+    &__description {
+        color: $black;
+    }
+
+
+    @media screen and (min-width: 576px) and (max-width: 768px) {
+        &:nth-child(n+3) {
+            grid-column: span 2;
+        }
+    }
+
+    box-shadow: rgba(0, 0, 0, 0.05) 0px -3px 12px 0px,
+    rgba(0, 0, 0, 0.08) 0px 3px 5px 0px;
+    transition: all .3s;
+}
+
+.publication:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

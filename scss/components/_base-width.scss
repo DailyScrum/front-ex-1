@@ -1,0 +1,26 @@
+.bg-container,
+.wrap {
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media screen and (min-width: 1441px) {
+    .container {
+        margin: 0 auto;
+        width: 83.333%; //pad:160px
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        margin: 0 auto;
+        width: 91.665%; //pad:60px
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .container {
+        margin: 0 auto;
+        width: 84.042%; //pad:30px;
+    }
+}

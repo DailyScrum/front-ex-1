@@ -1,0 +1,26 @@
+@import "./components/normalize";
+@import "./components/fonts";
+@import "./components/vars";
+@import "./components/base";
+@import "./components/base-width";
+
+@import "./sections/main-screen";
+
+.main-screen {
+    padding-bottom: 0;
+}
+
+@media screen and (max-width: 992px) {
+    @include three-lines-header;
+}
+
+@import "./sections/services";
+@import "./sections/trust-us";
+
+@import "./sections/footer";
+
+.footer {
+    &__content {
+        border-top: none;
+    }
+}
